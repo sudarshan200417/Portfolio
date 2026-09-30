@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sudarshan Sinha | Portfolio</title>
+<meta name="description" content="Final-year Integrated MCA student: Flutter apps, SOC automation and Salesforce administration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="logo" href="#top">Sudarshan Sinha</a>
+      <a class="l" href="#stats">Live stats</a>
+      <a class="l" href="#projects">Projects</a>
+      <a class="l" href="#skills">Skills</a>
+      <a class="l" href="#education">Education</a>
+      <a class="l" href="#contact">Contact</a>
+      <button id="theme" type="button" aria-label="Toggle dark mode">Dark mode</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<!-- ================= HERO ================= -->
+<div class="wrap hero">
+  <div class="hero-text">
+  <h1>I build <span id="heroWord">apps people can rely on.</span></h1>
+  <p class="sub" id="heroSub"></p>
+  <p class="tlabel">Pick a track to see the work that matches it:</p>
+  <div class="tracks" role="group" aria-label="Choose a track">
+    <button type="button" data-track="software" aria-pressed="true">Software and AI</button>
+    <button type="button" data-track="security" aria-pressed="false">Security (SOC)</button>
+    <button type="button" data-track="salesforce" aria-pressed="false">Salesforce Admin</button>
+  </div>
+  <div class="cta">
+    <!-- Resume changes automatically with the selected track. See RESUMES in js/script.js. -->
+    <a class="btn primary" href="assets/Sudarshan_Sinha_Software_AI_Resume.pdf" download="Sudarshan_Sinha_Software_AI_Resume.pdf">Download resume</a>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+  </div>
+  <!-- YOUR PHOTO: replace assets/photo.jpg with another image any time (square works best) -->
+  <figure class="portrait"><img src="assets/photo.jpg" alt="Portrait of Sudarshan Sinha" width="320" height="400"><figcaption><i></i>Open to work</figcaption></figure>
+</div>
+
+<!-- ================= LIVE STATS ================= -->
+<section id="stats"><div class="wrap">
+  <h2>Live coding stats</h2>
+  <p class="lead">These numbers load from public profiles each time the page opens. If a service is down, the last known value is shown instead.</p>
+  <div class="stats">
+
+    <div class="stat" style="--c:var(--ink)">
+      <h3>GitHub <span class="dot" id="ghDot"><i></i>loading</span></h3>
+      <div class="big" id="ghRepos">-<small>public repos</small></div>
+      <div class="rows"><span>Followers: <b id="ghFollowers">-</b></span><span>Following: <b id="ghFollowing">-</b></span></div>
+      <a class="go" href="https://github.com/sudarshan200417" target="_blank" rel="noopener" id="ghLink">View profile</a>
+    </div>
+
+    <div class="stat" style="--c:#F79F1B">
+      <h3>LeetCode <span class="dot" id="lcDot"><i></i>loading</span></h3>
+      <div class="big" id="lcSolved">-<small>solved</small></div>
+      <div class="bar" aria-hidden="true"><span id="lcE" style="background:#2BB673;width:0"></span><span id="lcM" style="background:#F79F1B;width:0"></span><span id="lcH" style="background:#E4572E;width:0"></span></div>
+      <div class="rows"><span>Easy <b id="lcEasy">-</b> / Medium <b id="lcMed">-</b> / Hard <b id="lcHard">-</b></span><span>Ranking: <b id="lcRank">-</b></span></div>
+      <!-- ADD YOUR LEETCODE PROFILE LINK HERE -->
+      <a class="go" href="https://leetcode.com/u/sudarshan_sinha/" target="_blank" rel="noopener" id="lcLink">View profile</a>
+    </div>
+
+    <div class="stat" style="--c:#2F8D46">
+      <h3>GeeksforGeeks <span class="dot" id="gfgDot"><i></i>loading</span></h3>
+      <div class="big" id="gfgSolved">-<small>problems solved</small></div>
+      <div class="rows"><span>Coding score: <b id="gfgScore">-</b></span><span>Institute rank: <b id="gfgRank">Top 3</b></span></div>
+      <!-- ADD YOUR GEEKSFORGEEKS PROFILE LINK HERE -->
+      <a class="go" href="https://www.geeksforgeeks.org/profile/sudarshan2eay8" target="_blank" rel="noopener" id="gfgLink">View profile</a>
+    </div>
+   
+    <div class="stat" style="--c:#1B6FD1">
+      <h3>Trailhead <span class="dot" id="thDot"><i></i>loading</span></h3>
+      <div class="big" id="thPoints">25,000+<small>points</small></div>
+      <div class="rows"><span>Badges: <b id="thBadges">20+</b></span><span>Topics: Admin, Sales Cloud, Security, Automation</span></div>
+      <!-- ADD YOUR TRAILBLAZER PROFILE LINK HERE (or in LINKS.thLink in js/script.js) -->
+      <a class="go" href="https://www.salesforce.com/trailblazer/npgjtzo8kzc103qoqt" target="_blank" rel="noopener" id="thLink">View profile</a>
+    </div>
+  </div>
+  <!-- <p class="note">GitHub, LeetCode and GeeksforGeeks update each time the page opens. Trailhead numbers are set in js/script.js.</p> -->
+</div></section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <p class="lead" id="projLead">Everything I have built, newest first. Choose a track above to highlight the matching work.</p>
+  <div class="grid" id="projGrid">
+
+    <!-- <article class="card" data-tags="software">
+      <span class="badge">Live on Google Play</span>
+      <div class="meta">2026 | Healthcare mobile app</div>
+      <h3>MediCalc ANC/PNC</h3>
+      <ul>
+        <li>Calculators for antenatal and postnatal care, published with 500+ downloads.</li>
+        <li>Responsive UI with Hive local storage so it works offline.</li>
+        <li>Google AdMob monetization, tuned through iterative testing.</li>
+      </ul>
+      <div class="tags"><span>Flutter</span><span>Dart</span><span>Hive</span><span>AdMob</span></div>
+      <div class="links">
+    
+        <a href="#" target="_blank" rel="noopener">Play Store</a>
+      
+         <a href="https://play.google.com/store/apps/details?id=com.kavy.myapp" target="_blank" rel="noopener">Code</a>
+      
+      </div>
+    </article> -->
+
+    <article class="card" data-tags="software security">
+      <div class="meta">2026 | Women safety mobile app</div>
+      <h3>PinkAlert</h3>
+      <ul>
+        <li>Real-time location tracking and one-tap SOS alerts to guardians.</li>
+        <li>Child and Guardian roles with separate workflows and access.</li>
+        <li>Firebase Authentication, Firestore sync, live chat and Google Maps.</li>
+      </ul>
+      <div class="tags"><span>Flutter</span><span>Firebase</span><span>Firestore</span><span>Google Maps API</span></div>
+      <div class="links">
+        <!-- ADD LIVE DEMO / APK / PLAY STORE LINK HERE -->
+        <a href="#" target="_blank" rel="noopener">Live demo</a>
+        <!-- ADD GITHUB REPO LINK HERE -->
+        <a href="https://github.com/sudarshan200417/PinkAlert---A-Women-Safty-Application" target="_blank" rel="noopener">Code</a>
+      </div>
+    </article>
+
+    <article class="card" data-tags="security">
+      <div class="meta">2025 | Security operations</div>
+      <h3>SOC Automation</h3>
+      <ul>
+        <li>Automated alert intake, IOC enrichment and incident escalation with SOAR playbooks.</li>
+        <li>Connects Wazuh, TheHive, Shuffle and the VirusTotal API.</li>
+        <li>Cut manual triage and analysis time by about 60%.</li>
+      </ul>
+      <div class="tags"><span>Wazuh</span><span>TheHive</span><span>Shuffle</span><span>VirusTotal API</span></div>
+      <div class="links">
+        <!-- ADD GITHUB REPO / BLOG WRITE-UP / DEMO VIDEO LINK HERE -->
+        <a href="https://github.com/sudarshan200417/SOC_Automation" target="_blank" rel="noopener">Write-up</a>
+        <!-- ADD GITHUB REPO LINK HERE -->
+        <a href="https://github.com/sudarshan200417/SOC_Automation" target="_blank" rel="noopener">Code</a>
+      </div>
+    </article>
+
+        <article class="card" data-tags="security">
+      <div class="meta">2025 | Security operations</div>
+      <h3>Active Directory</h3>
+      <ul>
+        <li>  Configured a Windows Server Active Directory domain and created
+        organizational units (OUs), user accounts, and security groups
+        for different departments.</li>
+        <li>Practiced user account management, password policies, group-based
+        access permissions, and account enable/disable operations using
+        Active Directory Users and Computers.</li>
+       <!-- <li>Cut manual triage and analysis time by about 60%.</li> -->
+      </ul>
+      <div class="tags"><span>Windows Server</span><span>Active Directory</span><span>Windows 10/11</span><span>Group Policy</span></div>
+      <div class="links">
+        <!-- ADD GITHUB REPO / BLOG WRITE-UP / DEMO VIDEO LINK HERE -->
+        <a href="https://github.com/sudarshan200417/Active-Directory" target="_blank" rel="noopener">Write-up</a>
+        <!-- ADD GITHUB REPO LINK HERE -->
+        <a href="https://github.com/sudarshan200417/Active-Directory" target="_blank" rel="noopener">Code</a>
+      </div>
+    </article>
+
+    <article class="card" data-tags="salesforce">
+      <div class="meta">2026 | Salesforce Platform</div>
+      <h3>Travel Approval App</h3>
+      <ul>
+        <li>End-to-end app for corporate travel requests and approvals.</li>
+        <li>Data model built with Lookup and Master-Detail relationships.</li>
+        <li>Access control, validation rules and Flow automation.</li>
+      </ul>
+      <div class="tags"><span>Salesforce CRM</span><span>App Manager</span><span>Flow Builder</span><span>Security</span></div>
+      <div class="links">
+        <!-- ADD DEMO VIDEO / SCREENSHOTS / TRAILHEAD LINK HERE -->
+        <!-- <a href="#" target="_blank" rel="noopener">Demo</a> -->
+      </div>
+    </article>
+
+    <article class="card" data-tags="software">
+      <div class="meta">2025 | Developer tool</div>
+      <h3>DevPulse</h3>
+      <ul>
+        <li>Dashboard that shows a GitHub user's profile and repositories.</li>
+        <li>Search, loading states and clear API error handling.</li>
+        <li>Separate UI, service, model and widget layers for reuse.</li>
+      </ul>
+      <div class="tags"><span>Flutter</span><span>Dart</span><span>REST API</span><span>GitHub API</span></div>
+      <div class="links">
+        <!-- ADD LIVE DEMO / APK LINK HERE -->
+        <a href="#" target="_blank" rel="noopener">Live demo</a>
+        <!-- ADD GITHUB REPO LINK HERE -->
+        <a href="#" target="_blank" rel="noopener">Code</a>
+      </div>
+      
+    </article>
+        <article class="card" data-tags="software">
+      <div class="meta">2025 | Developer tool</div>
+      <h3>BMIGLow</h3>
+      <ul>
+        <li>Metric / Imperial BMI calculator
+            - Male / Female selection
+            - Age, height and weight validation
+            - BMI category</li>
+        <li> Local BMI history (up to 20 entries)
+            - Clear history
+            - Material-style attractive UI
+            - Fully offline</li>
+        <li>Healthy-weight reference range
+            - BMR calculation
+            - Activity-based daily calorie estimate
+            - Personalized general guidance</li>
+      </ul>
+      <div class="tags"><span>Android</span><span>XML</span><span>Java</span></div>
+      <div class="links">
+        <!-- ADD LIVE DEMO / APK LINK HERE -->
+        <a href="#" target="_blank" rel="noopener">Live demo</a>
+        <!-- ADD GITHUB REPO LINK HERE -->
+        <a href="#" target="_blank" rel="noopener">Code</a>
+      </div>
+    </article>
+
+    <!-- TO ADD A NEW PROJECT: copy one <article> above. data-tags can be software, security, salesforce (space separated). -->
+  </div>
+</div></section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill" style="--c:var(--teal)"><h3>Mobile and software</h3><p>Flutter, Dart, Java, C, Provider, Riverpod, BLoC, GetX, Material Design, OOP, Data Structures and Algorithms, SOLID, Agile.</p></div>
+    <div class="skill" style="--c:var(--teal)"><h3>Backend and data</h3><p>Firebase Auth, Firestore, Realtime Database, REST APIs, JSON, SQLite, Hive, MySQL, Google Maps API.</p></div>
+    <div class="skill" style="--c:var(--coral)"><h3>Security</h3><p>SOC automation, SOAR playbooks, Wazuh, TheHive, Shuffle, VirusTotal, Linux, Bash, Computer Networks.</p></div>
+    <div class="skill" style="--c:#1B6FD1"><h3>Salesforce</h3><p>Sales Cloud, Lightning Experience, Profiles, Roles, Permission Sets, OWD, Sharing Rules, Flow Builder, Validation Rules, SOQL, Reports and Dashboards.</p></div>
+    <div class="skill" style="--c:var(--muted)"><h3>Tools</h3><p>Git, GitHub, Android Studio, VS Code, Postman, Jira, Google AdMob.</p></div>
+  </div>
+</div></section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education"><div class="wrap two">
+  <div>
+    <h2>Education</h2>
+    <div class="tl">
+      <div><h3>Integrated MCA, Cybersecurity and Forensics</h3><p>Parul University, Vadodara | 2023 to present<br>CGPA 8.10</p></div>
+      <div><h3>12th Science (PCMB)</h3><p>Kerala Public School, Kadma, Jamshedpur | 2022 to 2023</p></div>
+    </div>
+  </div>
+  <div>
+    <h2>Certificates</h2>
+    <ul class="certs">
+      <li>Salesforce Administrator and App Builder</li>
+      <li>Google Cybersecurity Professional Certificate (Coursera)</li>
+      <li>NPTEL Elite: Data Structures and Algorithms Using Java</li>
+      <li>Top 3 coder in the institute on GeeksforGeeks</li>
+      <!-- ADD CERTIFICATE VERIFICATION LINKS by wrapping each item in <a href="..."> -->
+    </ul>
+  </div>
+</div></section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact"><div class="wrap">
+  <div class="contact">
+    <h2>Let's talk</h2>
+    <p class="lead">Open to Software or AI engineering, SOC analyst and Salesforce administrator roles. Email is the fastest way to reach me.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:sinhasudarshan17@gmail.com">sinhasudarshan17@gmail.com</a>
+      <!-- ADD YOUR LINKEDIN PROFILE LINK HERE -->
+      <a class="btn" href="www.linkedin.com/in/sudarshan-sinha-162598281" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/sudarshan200417" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="tel:+919430357017">Call</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">Sudarshan Sinha | Vadodara, India</div></footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
